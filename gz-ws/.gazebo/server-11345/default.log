@@ -4,9 +4,9 @@ Released under the Apache 2 License.
 http://gazebosim.org
 
 
-(1575345850 542297892) [Msg] Waiting for master.
-(1575345850 571961024) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
-(1575345850 581296602) [Msg] Publicized address: 192.168.56.1
-(1575345852 6969227) Init world[default]
-(1575345861 877663428) [Wrn] [D:\gz-ws\gazebo\gazebo\transport\Publisher.cc:142] Queue limit reached for topic /gazebo/default/physics/contacts, deleting message. This warning is printed only once.
-(1575345865 903664016) Sleep time is larger than clock resolution, skipping sleep
+(1575361717 63874000) [Msg] Waiting for master.
+(1575361717 76233900) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1575361717 78208400) [Msg] Publicized address: 192.168.1.170
+(1575361719 760959000) [Err] [D:\gz-ws\gazebo\gazebo\Server.cc:391] Unable to initialize sdf
+(1575361719 761029600) [Wrn] [D:\gz-ws\gazebo\gazebo\Server.cc:341] Falling back on worlds/empty.world
+(1575361719 761192300) [Err] [D:\gz-ws\gazebo\gazebo\Server.cc:391] Unable to initialize sdf

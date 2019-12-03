@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <xsd:annotation>
+    <xsd:documentation xml:lang='en'>
+      <![CDATA[Link state]]>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/types.xsd'/>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/frame.xsd'/>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/pose.xsd'/>
+  <xsd:element name='link'>
+    <xsd:complexType>
+      <xsd:choice maxOccurs='unbounded'>
+        <xsd:choice  minOccurs='0' maxOccurs='1'>
+        <xsd:element name='velocity' type='pose'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Velocity of the link. The x, y, z components of the pose
+      correspond to the linear velocity of the link, and the roll, pitch, yaw
+      components correspond to the angular velocity of the link
+    ]]>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:choice  minOccurs='0' maxOccurs='1'>
+        <xsd:element name='acceleration' type='pose'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Acceleration of the link. The x, y, z components of the pose
+      correspond to the linear acceleration of the link, and the roll,
+      pitch, yaw components correspond to the angular acceleration of the link
+    ]]>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:choice  minOccurs='0' maxOccurs='1'>
+        <xsd:element name='wrench' type='pose'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Force and torque applied to the link. The x, y, z components
+      of the pose correspond to the force applied to the link, and the roll,
+      pitch, yaw components correspond to the torque applied to the link
+    ]]>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:choice  minOccurs='0' maxOccurs='unbounded'>
+        <xsd:element name='collision'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Collision state]]>
+            </xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:choice maxOccurs='unbounded'>
+            </xsd:choice>
+            <xsd:attribute name='name' type='xsd:string' use='required' >
+              <xsd:annotation>
+                <xsd:documentation xml:lang='en'>
+                  <![CDATA[Name of the collision]]>
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:attribute>
+          </xsd:complexType>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:element ref='frame'/>
+        <xsd:element ref='pose'/>
+      </xsd:choice>
+      <xsd:attribute name='name' type='xsd:string' use='required' >
+        <xsd:annotation>
+          <xsd:documentation xml:lang='en'>
+            <![CDATA[Name of the link]]>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

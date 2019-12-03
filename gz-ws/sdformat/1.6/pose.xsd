@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <xsd:annotation>
+    <xsd:documentation xml:lang='en'>
+      <![CDATA[A position(x,y,z) and orientation(roll, pitch yaw) with respect to the specified frame.]]>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/types.xsd'/>
+  <xsd:element name='pose'>
+    <xsd:complexType>
+      <xsd:attribute name='frame' type='xsd:string'  >
+        <xsd:annotation>
+          <xsd:documentation xml:lang='en'>
+            <![CDATA[Name of frame which the pose is defined relative to.]]>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

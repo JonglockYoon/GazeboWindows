@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <xsd:annotation>
+    <xsd:documentation xml:lang='en'>
+      <![CDATA[Model state]]>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/types.xsd'/>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/frame.xsd'/>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/pose.xsd'/>
+  <xsd:include schemaLocation='http://sdformat.org/schemas/link_state.xsd'/>
+  <xsd:element name='model'>
+    <xsd:complexType>
+      <xsd:choice maxOccurs='unbounded'>
+        <xsd:choice  minOccurs='0' maxOccurs='unbounded'>
+        <xsd:element name='joint'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Joint angle]]>
+            </xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:choice maxOccurs='unbounded'>
+              <xsd:choice  minOccurs='1' maxOccurs='unbounded'>
+              <xsd:element name='angle' type='xsd:double'>
+                <xsd:annotation>
+                  <xsd:documentation xml:lang='en'>
+                    <![CDATA[Angle of an axis]]>
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              </xsd:choice>
+            </xsd:choice>
+            <xsd:attribute name='name' type='xsd:string' use='required' >
+              <xsd:annotation>
+                <xsd:documentation xml:lang='en'>
+                  <![CDATA[Name of the joint]]>
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:attribute>
+          </xsd:complexType>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:choice  minOccurs='0' maxOccurs='unbounded'>
+        <xsd:element name='model'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[A nested model state element]]>
+            </xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:choice maxOccurs='unbounded'>
+            </xsd:choice>
+            <xsd:attribute name='name' type='xsd:string' use='required' >
+              <xsd:annotation>
+                <xsd:documentation xml:lang='en'>
+                  <![CDATA[Name of the model. ]]>
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:attribute>
+          </xsd:complexType>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:choice  minOccurs='0' maxOccurs='1'>
+        <xsd:element name='scale' type='vector3'>
+          <xsd:annotation>
+            <xsd:documentation xml:lang='en'>
+              <![CDATA[Scale for the 3 dimensions of the model.]]>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        </xsd:choice>
+        <xsd:element ref='frame'/>
+        <xsd:element ref='pose'/>
+        <xsd:element ref='link'/>
+      </xsd:choice>
+      <xsd:attribute name='name' type='xsd:string' use='required' >
+        <xsd:annotation>
+          <xsd:documentation xml:lang='en'>
+            <![CDATA[Name of the model]]>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
