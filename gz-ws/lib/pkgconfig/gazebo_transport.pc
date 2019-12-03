@@ -1,0 +1,10 @@
+prefix=D:/gz-ws
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: gazebo_transport
+Description: Gazebo Transport Library
+Version: 10.1.0
+Requires:
+Libs: -L${libdir} -lgazebo_transport -lgazebo_msgs 
+CFlags: -I${includedir}/gazebo-10

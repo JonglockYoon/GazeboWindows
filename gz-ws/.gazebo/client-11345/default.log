@@ -1,0 +1,14 @@
+Gazebo multi-robot simulator, version 10.1.0
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1575345856 992234221) [Msg] Waiting for master.
+(1575345857 17095938) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1575345857 22951350) [Msg] Publicized address: 192.168.56.1
+(1575345857 24034560) [Err] [D:\gz-ws\gazebo\gazebo\gui\GuiIface.cc:545] Unable to save INI file["\Users\jlyoon\.gazebo\gui.ini"]
+(1575345857 24644457) [Wrn] [D:\gz-ws\gazebo\gazebo\gui\GuiIface.cc:300] Couldn't locate specified .ini. Creating file at "\Users\jlyoon\.gazebo\gui.ini"
+(1575345857 25706745) [Err] [D:\gz-ws\gazebo\gazebo\gui\GuiIface.cc:311] Unable to read configuration file "\Users\jlyoon\.gazebo\gui.ini"
+(1575345857 26590209) Loaded .ini file from: "\Users\jlyoon\.gazebo\gui.ini"
+(1575345871 402269386) [Err] [D:\gz-ws\gazebo\gazebo\transport\Connection.cc:273] 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다Value[995]

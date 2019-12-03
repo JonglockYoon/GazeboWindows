@@ -1,0 +1,160 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="my_robot">
+
+
+  <link
+    name="belt_link">
+    <inertial>
+      <origin
+        xyz="0.6096 2.7377E-15 -3.81"
+        rpy="0 0 0" />
+      <mass
+        value="44.292" />
+      <inertia
+        ixx="273.86"
+        ixy="4.3225E-28"
+        ixz="5.8096E-16"
+        iyy="273.75"
+        iyz="1.1641E-14"
+        izz="7.7268" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/belt_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/belt_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+    <gazebo reference="belt_link">
+      <material>Gazebo/FlatBlack</material>
+    </gazebo>
+  <link
+    name="cylinder1_link">
+    <inertial>
+      <origin
+        xyz="0.0013099 -0.6096 -6.1529E-18"
+        rpy="0 0 0" />
+      <mass
+        value="767.9" />
+      <inertia
+        ixx="114.77"
+        ixy="4.9176E-15"
+        ixz="-1.3005E-17"
+        iyy="39.109"
+        iyz="6.0768E-31"
+        izz="114.58" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/cylinder1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/cylinder1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="belt_link" />
+    <child
+      link="cylinder1_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="cylinder2_link">
+    <inertial>
+      <origin
+        xyz="0.0013099 -0.6096 0"
+        rpy="0 0 0" />
+      <mass
+        value="767.9" />
+      <inertia
+        ixx="114.77"
+        ixy="4.8695E-15"
+        ixz="-6.0881E-16"
+        iyy="39.109"
+        iyz="5.158E-31"
+        izz="114.58" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/cylinder2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Belt1_BeltLink_2Joints_Velocity_Effort_1Joint/meshes/cylinder2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder2_joint"
+    type="continuous">
+    <origin
+      xyz="0 7.62 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="belt_link" />
+    <child
+      link="cylinder2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  </model>
+</sdf>

@@ -1,0 +1,405 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+<model name="my_model">
+  <static>false</static>
+  <link name="base">
+            <pose>0 0 .1 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <inertia>
+                    <ixx>0.01</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.01</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.01</izz>
+                </inertia>
+                <mass>10</mass>
+            </inertial>
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>0.4 0.4 0.2</size>
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.4 0.4 0.2</size>
+                    </box>
+                </geometry>
+            </visual>
+        </link>
+  <link name="joint1">
+        <pose>0 0 0.3 0 1.5707 1.5707</pose>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>  
+    <link name="link">
+     <pose>0 0 .66 0 0 0</pose>
+      <inertial>
+        <mass>.25</mass>
+        <inertia> <!-- interias are tricky to compute -->
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  <link name="joint2">
+        <pose>0 0 1.01 0 1.5707 1.5707</pose>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>  
+  <link name="link1">
+        <pose>0 0 1.37 0 0 0</pose>
+        <inertial>
+        <mass>.2</mass>
+        <inertia> 
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>      
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>     
+        </inertia>
+      </inertial>
+      <collision name="collision1">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual1">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link> 
+  <link name="joint3">
+        <pose>0 0 1.72 0 1.5707 1.5707</pose>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>  
+  <link name="link2">
+        <pose>0 0 2.07 0 0 0</pose>
+        <inertial>
+        <mass>.2</mass>
+        <inertia> 
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>      
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>     
+        </inertia>
+      </inertial>
+      <collision name="collision2">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link> 
+  <link name="joint4">
+        <pose>0 0 2.42 0 1.5707 1.5707</pose>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+  <link name="link3">
+        <pose>0 0 2.78 0 0 0</pose>
+        <inertial>
+        <mass>.2</mass>
+        <inertia> 
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>      
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>     
+        </inertia>
+      </inertial>
+      <collision name="collision3">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual3">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  <link name="joint5">
+        <pose>0 0 3.13 0 1.5707 1.5707</pose>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>.1</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+ 
+  <link name="link4">
+        <pose>0 0 3.48 0 0 0</pose>
+        <inertial>
+        <mass>.2</mass>
+        <inertia> 
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>      
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>     
+        </inertia>
+      </inertial>
+      <collision name="collision4">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual4">
+        <geometry>
+          <box>
+            <size>.1 .1 .5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link> 
+  <joint name="base" type="revolute">
+            <pose>0 0 0 0 0 0</pose>
+            <child>base</child>
+            <parent>world</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>1 0 0</xyz>
+            </axis>
+        </joint>
+
+  <joint name="joint1" type="revolute">
+              <pose>0 0 0 0 0 0</pose>
+            <child>joint1</child>
+            <parent>base</parent>
+            <axis>
+                <limit>
+                    <lower>-.5</lower>
+                    <upper>.5</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="link-join1" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>link</child>
+            <parent>joint1</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="joint2" type="revolute">
+              <pose>0 0 -0.05 0 0 0</pose>
+            <child>joint2</child>
+            <parent>link</parent>
+            <axis>
+                <limit>
+                    <lower>-1</lower>
+                    <upper>1</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="link1-joint2" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>link1</child>
+            <parent>joint2</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="joint3" type="revolute">
+              <pose>0 0 -0.05 0 0 0</pose>
+            <child>joint3</child>
+            <parent>link1</parent>
+            <axis>
+                <limit>
+                    <lower>-.5</lower>
+                    <upper>0.5</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="link2-joint3" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>link2</child>
+            <parent>joint3</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+   <joint name="joint4" type="revolute">
+              <pose>0 0 -0.05 0 0 0</pose>
+            <child>joint4</child>
+            <parent>link2</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="link3-joint4" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>link3</child>
+            <parent>joint4</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <joint name="joint5" type="revolute">
+           <pose>0 0 -0.05 0 0 0</pose>
+            <child>joint5</child>
+            <parent>link3</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+   <joint name="link4-joint5" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>link4</child>
+            <parent>joint5</parent>
+            <axis>
+                <limit>
+                    <lower>0</lower>
+                    <upper>0</upper>
+                </limit>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+  <plugin name="hello_world" filename="libhello_world.so"/>
+  </model>
+</sdf>

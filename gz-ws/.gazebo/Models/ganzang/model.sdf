@@ -1,0 +1,67 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+ <model name="ganzang"> 
+  <static>false</static>
+  
+
+  <link name='link0'> 
+   <pose>0 0 0.05 0 0 0</pose> 
+        <collision name='collision'> 
+    <geometry> 
+          <box>
+      <size>.1 .1 .1</size>
+          </box> 
+    </geometry>
+   </collision>
+   <visual name='visual'>  
+    <geometry>
+     <box>
+      <size>.1 .1 .1</size>
+     </box>
+    </geometry>
+   </visual>
+  </link>
+
+  <link name="link1">
+   <pose>0 0.1 0.125 0 0 0</pose>
+   
+   <collision name="collision">
+    <geometry>
+     <box>
+      <size>.05 .3 .05</size>
+     </box>
+    </geometry>
+   </collision>
+   <visual name="visual">
+    <geometry>
+     <box>
+      <size>.05 .3 .05</size>
+     </box>
+    </geometry>
+   </visual>
+  </link>
+
+  <joint type="revolute" name="joint0">
+   <pose>0 0 0 0 0 0</pose>
+   <child>link0</child>
+   <parent>world</parent>
+   <axis>
+    <xyz>0 0 0</xyz>
+   </axis>
+  </joint>
+
+  <joint type="revolute" name="joint1">
+   <pose>0 -0.1 0 0 0 0</pose>
+   <child>link1</child>
+   <parent>link0</parent>
+   <axis>
+    <limit>
+     <lower>-1</lower>
+     <upper>1</upper>
+    </limit>
+    <xyz>0 0 10</xyz>
+   </axis>
+  </joint>
+
+ </model>
+</sdf>

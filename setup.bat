@@ -1,0 +1,9 @@
+@echo off
+set HOME=E:\gz-ws
+set GAZEBO_MASTER_URI=http://localhost:11345
+set GAZEBO_MODEL_DATABASE_URI=http://models.gazebosim.org
+set GAZEBO_RESOURCE_PATH=E:\gz-ws\share\gazebo-10
+set GAZEBO_PLUGIN_PATH=E:\gz-ws\lib\gazebo-10\plugins
+set GAZEBO_MODEL_PATH=E:\gz-ws\share\gazebo-10\models
+set OGRE_RESOURCE_PATH=E:\gz-ws\bin\Release
+set PATH=E:\gz-ws\bin;E:\gz-ws\lib;E:\gz-ws\bin;E:\gz-ws\bin\Release;

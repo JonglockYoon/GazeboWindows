@@ -1,0 +1,10 @@
+prefix=D:/gz-ws
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: gazebo
+Description: Gazebo Exported ODE Libraries
+Version: 10.1.0
+Requires:
+Libs: -Wl,-rpath,${prefix}/lib -L${prefix}/lib -lgazebo_ode
+CFlags: -I${includedir}/gazebo-10

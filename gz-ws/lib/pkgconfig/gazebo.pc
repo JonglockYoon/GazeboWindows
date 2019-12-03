@@ -1,0 +1,10 @@
+prefix=D:/gz-ws
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: gazebo
+Description: Gazebo Libraries
+Version: 10.1.0
+Requires: sdformat protobuf tbb ignition-math4 ignition-msgs1 ignition-transport4 
+Libs: -Wl,-rpath,${prefix}/lib/gazebo-10/plugins -L${libdir} -L${prefix}/lib/gazebo-10/plugins -lgazebo_transport -lgazebo_physics -lgazebo_sensors -lgazebo_rendering -lgazebo_gui -lgazebo_client -lgazebo_msgs -lgazebo_common -lgazebo -LD:/vcpkg/installed/x64-windows/lib -LD:/vcpkg/installed/x64-windows/debug/lib -loptimized -lboost_thread-vc140-mt -ldebug -lboost_thread-vc140-mt-gd -loptimized -lboost_system-vc140-mt -ldebug -lboost_system-vc140-mt-gd -loptimized -lboost_filesystem-vc140-mt -ldebug -lboost_filesystem-vc140-mt-gd -loptimized -lboost_program_options-vc140-mt -ldebug -lboost_program_options-vc140-mt-gd -loptimized -lboost_regex-vc140-mt -ldebug -lboost_regex-vc140-mt-gd -loptimized -lboost_iostreams-vc140-mt -ldebug -lboost_iostreams-vc140-mt-gd -loptimized -lboost_date_time-vc140-mt -ldebug -lboost_date_time-vc140-mt-gd -loptimized -lboost_chrono-vc140-mt -ldebug -lboost_chrono-vc140-mt-gd -loptimized -lboost_atomic-vc140-mt -ldebug -lboost_atomic-vc140-mt-gd 
+CFlags: -I${includedir}/gazebo-10 -ID:/vcpkg/installed/x64-windows/include -std=c++11

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+ <world name="default">
+
+ <include> <uri>model://ground_plane</uri> </include>
+ <include> <uri>model://sun</uri> </include>
+ <include>
+    <uri>model://ganzang</uri><!-- model.config에 있는 name -->
+	<!-- plugin 정보 -->
+    <plugin name="ganzang_spin" filename="ganzang_spin.dll"/>
+ </include>
+
+ </world>
+</sdf>
